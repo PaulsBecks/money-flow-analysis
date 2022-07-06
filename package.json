@@ -1,5 +1,6 @@
 {
   "name": "sankey-sparkasse",
+  "homepage": "https://moneyflow.paulbeck.dev",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -13,19 +14,22 @@
     "@types/react-dom": "^18.0.5",
     "assert": "^2.0.0",
     "buffer": "^6.0.3",
+    "crypto": "npm:crypto-browserify",
     "emoji-picker-react": "^3.5.1",
+    "gh-pages": "^4.0.0",
     "plotly.js": "^2.12.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-plotlyjs-ts": "^2.2.2",
     "react-scripts": "5.0.1",
+    "stream": "npm:stream-browserify",
     "stream-browserify": "^3.0.0",
     "typescript": "^4.7.4",
-    "web-vitals": "^2.1.0",
-    "crypto": "npm:crypto-browserify",
-    "stream": "npm:stream-browserify"
+    "web-vitals": "^2.1.0"
   },
   "scripts": {
+    "predeploy": "yarn run build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
